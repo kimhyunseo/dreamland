@@ -11,21 +11,29 @@
   z-index: 100;
   @include flex-layout();
   .navbar-container {
-    @include flex-layout();
+    padding: 10px 15px;
+    width: 100%;
+    @include flex-layout($justify:space-between);
     .page-name {
       color: var(--color-graytxt);
       @include font-body-bold;
       cursor: pointer;
     }
-      .arrow-icon {
-        position: absolute;
-        left: 5px;
-        font-size: 25px;
-        cursor: pointer;
-        
-        path{
-          fill: var(--color-graytxt);
-        }
+    .arrow-icon {
+      font-size: 25px;
+      cursor: pointer;
+      path{
+        fill: var(--color-graytxt);
+      }
+    }
+    .user-icon{
+      font-size: 25px;
+      padding: 0 3px;
+      color: var(--color-graytxt);
+      cursor: pointer;
+    }
+    .fake-user{
+      opacity: 0;
     }
   }
 }

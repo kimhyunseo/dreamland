@@ -5,7 +5,7 @@
   padding-top: 60%;
   @include flex-layout(column, space-between, center);
   @include desktop {
-    padding: 0;
+    padding: 7rem;
   }
   .complete-contents {
     @include flex-layout(column);

@@ -13,90 +13,112 @@ button, input{
     @include font-body();
     @include flex-layout(column);
     gap: 1rem;
-    .login-logo{
-        margin-bottom: 4rem;
+    @media screen and (min-width:1024px){
+        padding: 7rem 12rem;
     }
-    form{
+    .login-all-include{
         width: 100%;
         @include flex-layout(column);
-        gap: 2rem;
-        input{
-            width: 100%;
-            padding: 2rem;
-            border: 1px solid var(--color-graytxt);
-            outline-color: var(--color-primary);
-            border-radius: 1.8rem;
+        gap: 1rem;
+        @media screen and (min-width:1024px){
+            gap: 0.8rem;
         }
-        .auto-find{
-            @include font-caption();
-            @include flex-layout(row,space-between);
+        .login-logo{
+            margin-bottom: 4rem;
+        }
+        form{
             width: 100%;
-            padding: 0 10px;
-            .auto{
-                @include flex-layout($justify:flex-start);
-                gap: 0.5rem;
-                input{
-                    width: auto;
+            @include flex-layout(column);
+            gap: 2rem;
+            @media screen and (min-width:1024px){
+                gap: 1rem;
+            }
+            input{
+                width: 100%;
+                padding: 2rem;
+                border: 1px solid var(--color-graytxt);
+                outline-color: var(--color-primary);
+                border-radius: 1.8rem;
+                @media screen and (min-width:1024px){
+                    padding: 1.5rem;
+                    border-radius: 1.6rem;
                 }
             }
-            .find{
-                @include flex-layout($justify:flex-end);
-                gap: 1.2rem;
-                @media screen and (max-width:445px){
-                    font-size: 1.1rem;
-                }
-            }
-        }
-        .login-btn{
-            @include btn1();
-            margin-top: 2rem;
-            margin-bottom: 0;
-        }
-    }
-    .signup-btn{
-        @include btn2();
-        // width: 90%;
-    }
-    .dream-com{
-        margin-top: 2rem;
-        @include font-caption()
-    }
-    .no-data{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 1000;
-        .no-data-box{
-            @include flex-layout(column, space-between, center);
-            background-color: var(--color-lightgraytxt);
-            color: var(--color-maintxt);
-            width: 60%;
-            height: 20rem;
-            padding: 24px 32px;
-            border-radius: 1rem;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            min-width: 260px;
-            svg {
-                font-size: 5rem;
-                color: var(--color-sub);
-            }
-            p {
-                @include font-body-bold;
-                text-align: center;
-            }
-            button {
-                @include pop-btn();
-            }
-            .no-data-bot{
+            .auto-find{
                 @include font-caption();
-                color: var(--color-graytxt);
+                @include flex-layout(row,space-between);
+                width: 100%;
+                padding: 0 10px;
+                .auto{
+                    @include flex-layout($justify:flex-start);
+                    gap: 0.5rem;
+                    input{
+                        width: auto;
+                    }
+                }
+                .find{
+                    @include flex-layout($justify:flex-end);
+                    gap: 1.2rem;
+                    @media screen and (max-width:445px){
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+            .login-btn{
+                @include btn1();
+                margin-top: 2rem;
+                margin-bottom: 0;
+                @media screen and (min-width:1024px){
+                    margin-top: 5rem;
+                }
+            }
+        }
+        .signup-btn{
+            @include btn2();
+            // width: 90%;
+        }
+        .dream-com{
+            margin-top: 2rem;
+            @include font-caption()
+        }
+        .no-data{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            .no-data-box{
+                @include flex-layout(column, space-between, center);
+                background-color: var(--color-lightgraytxt);
+                color: var(--color-maintxt);
+                width: 60%;
+                height: 20rem;
+                padding: 24px 32px;
+                border-radius: 1rem;
+                text-align: center;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                min-width: 260px;
+                max-width: 400px;
+                svg {
+                    font-size: 5rem;
+                    color: var(--color-sub);
+                }
+                p {
+                    @include font-body-bold;
+                    text-align: center;
+                }
+                button {
+                    @include pop-btn();
+                }
+                .no-data-bot{
+                    @include font-caption();
+                    color: var(--color-graytxt);
+                }
             }
         }
     }
@@ -108,13 +130,13 @@ button, input{
     max-width: $small-size;
     margin: 0 auto;
     padding: 130px 16px;
-    padding-bottom: 70px;
+    padding-bottom: 100px;
     width: 100%;
     height: 100%;
     @include font-body();
     @include flex-layout(column,flex-start,flex-start);
     gap: 3rem;
-    overflow: scroll;
+    // overflow: scroll;
     h2{
         @include font-h2();
         margin-left: 1.6rem;
@@ -240,6 +262,7 @@ button, input{
             text-align: center;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             min-width: 260px;
+            max-width: 400px;
             svg {
                 font-size: 5rem;
                 color: var(--color-sub);
@@ -270,13 +293,19 @@ button, input{
     margin: 0 auto;
     padding: 100px 16px;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     @include font-body();
     @include flex-layout(column,flex-start,flex-start);
     gap: 2rem;
-    overflow: scroll;
+    // overflow: scroll;
+    @media screen and (min-width:1024px){
+        padding: 6rem 5rem;
+    }
     h2{
         margin-bottom: 5rem;
+        @media screen and (min-width:1024px){
+            margin-bottom: 2rem;
+        }
     }
     form{
         width: 100%;
@@ -356,6 +385,7 @@ button, input{
             text-align: center;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             min-width: 260px;
+            max-width: 400px;
             svg {
                 font-size: 5rem;
                 color: var(--color-sub);
@@ -373,6 +403,48 @@ button, input{
             }
         }
     }
+    .too-short{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        .too-short-pass{
+            @include flex-layout(column, space-between, center);
+            background-color: var(--color-lightgraytxt);
+            color: var(--color-maintxt);
+            width: 60%;
+            height: 20rem;
+            padding: 24px 32px;
+            border-radius: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            min-width: 260px;
+            @include pop-max{
+                width: 400px;
+            }
+            svg {
+                font-size: 5rem;
+                color: var(--color-sub);
+            }
+            p {
+                @include font-body-bold;
+                text-align: center;
+            }
+            button {
+                @include pop-btn();
+            }
+            .too-short-bot{
+                @include font-caption();
+                color: var(--color-graytxt);
+            }
+        }
+    }
 }
 
 //회원가입 완료페이지
@@ -382,12 +454,19 @@ button, input{
     margin: 0 auto;
     padding: 100px 16px;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     @include font-body();
     @include flex-layout(column,flex-end);
+    @media screen and (min-width:1024px){
+        padding: 7rem 5rem;
+        justify-content: space-between;
+    }
     .complete-ment{
         text-align: center;
         margin-bottom: 18rem;
+        @media screen and (min-width:1024px){
+            margin-top: 20rem;
+        }
         .check-sign{
             font-size: 7.2rem;
             color: var(--color-primary);
@@ -397,6 +476,10 @@ button, input{
     p{
         @include font-caption();
         margin-bottom: 7rem;
+        @media screen and (min-width:1024px){
+            margin-bottom: 0;
+            margin-top: 7rem;
+        }
     }
     .btn-home-login{
         width: 100%;
@@ -417,14 +500,20 @@ button, input{
     max-width: $small-size;
     margin: 0 auto;
     padding: 130px 16px;
-    padding-bottom: 70px;
+    padding-bottom: 100px;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     @include font-body();
-    @include flex-layout(column,flex-start,flex-start);
-    gap: 4rem;
-    overflow: scroll;
-    .find-id-input{
+    @include flex-layout();
+    // overflow: scroll;
+    @media screen and (min-width:1024px){
+        padding: 7rem 5rem;
+    }
+    .find-id-wrap{
+        width: 100%;
+        @include flex-layout(column,flex-start,flex-start);
+        gap: 4rem;
+        .find-id-input{
         height: 100%;
         width: 100%;
         @include flex-layout(column,flex-start);
@@ -448,7 +537,7 @@ button, input{
         }
         button{
             @include btn1();
-            margin-top: 36rem;
+            margin-top: 28rem;
             margin-bottom: 0;
         }
     }
@@ -474,6 +563,7 @@ button, input{
             text-align: center;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             min-width: 260px;
+            max-width: 400px;
             svg {
                 font-size: 5rem;
                 color: var(--color-sub);
@@ -513,6 +603,7 @@ button, input{
             text-align: center;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             min-width: 260px;
+            max-width: 400px;
             svg {
                 font-size: 5rem;
                 color: var(--color-sub);
@@ -530,6 +621,7 @@ button, input{
             }
         }
     }
+    }
 }
 
 //찾은 ID 페이지
@@ -538,33 +630,40 @@ button, input{
     max-width: $small-size;
     margin: 0 auto;
     padding: 130px 16px;
-    padding-bottom: 70px;
+    padding-bottom: 100px;
     width: 100%;
     height: 100%;
     @include font-body();
-    @include flex-layout(column,flex-start,flex-start);
-    gap: 4rem;
-    overflow: scroll;
-    .found-id{
-        width: 100%;
-        label{
-            @include font-caption();
-            padding: 1rem;
-        }
-        p{
-            @include font-h3();
-            margin-top: 1rem;
-            width: 100%;
-            background-color: var(--color-lightgraytxt);
-            padding: 2rem;
-            font-weight: bold;
-            border-radius: 1.6rem;
-        }
+    @include flex-layout();
+    // overflow: scroll;
+    @media screen and (min-width:1024px){
+        padding: 7rem 5rem;
     }
-    button{
-        @include btn1();
-        margin-top: 42rem;
-        margin-bottom: 0;
+    .found-id-wrap{
+        width: 100%;
+        @include flex-layout(column,flex-start,flex-start);
+        gap: 4rem;
+        .found-id{
+            width: 100%;
+            label{
+                @include font-caption();
+                padding: 1rem;
+            }
+            p{
+                @include font-h3();
+                margin-top: 1rem;
+                width: 100%;
+                background-color: var(--color-lightgraytxt);
+                padding: 2rem;
+                font-weight: bold;
+                border-radius: 1.6rem;
+            }
+        }
+        button{
+            @include btn1();
+            margin-top: 42rem;
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -574,17 +673,152 @@ button, input{
     max-width: $small-size;
     margin: 0 auto;
     padding: 130px 16px;
-    padding-bottom: 70px;
+    padding-bottom: 100px;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     @include font-body();
-    @include flex-layout(column,flex-start,flex-start);
-    gap: 4rem;
-    overflow-y: scroll;
-    form{
+    @include flex-layout();
+    // overflow-y: scroll;
+    @media screen and (min-width:1024px){
+        padding: 7rem 5rem;
+    }
+    .find-pw-wrap{
         width: 100%;
-        > div{
-            
+        @include flex-layout(column,flex-start,flex-start);
+        gap: 4rem;
+        form{
+            width: 100%;
+            > div{
+                
+                label{
+                    @include font-caption();
+                    padding: 1rem;
+                }
+                input{
+                    padding: 1.6rem;
+                    width: 100%;
+                    border: 1px solid var(--color-graytxt);
+                    border-radius: 1.6rem;
+                    outline-color: var(--color-primary);
+                    &::placeholder{
+                        @include font-caption();
+                    }
+                }
+            }
+            button{
+                @include btn1();
+                margin-bottom: 0;
+                margin-top: 25rem;
+            }
+        }
+        .noid-popup{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            .id-pop{
+                @include flex-layout(column, space-between, center);
+                background-color: var(--color-lightgraytxt);
+                color: var(--color-maintxt);
+                width: 60%;
+                height: 20rem;
+                padding: 24px 32px;
+                border-radius: 1rem;
+                text-align: center;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                min-width: 260px;
+                max-width: 400px;
+                svg {
+                    font-size: 5rem;
+                    color: var(--color-sub);
+                }
+                p {
+                    @include font-body-bold;
+                    text-align: center;
+                }
+                button {
+                    @include pop-btn();
+                }
+                .noid-bot{
+                    @include font-caption();
+                    color: var(--color-graytxt);
+                }
+            }
+        }
+        .empty-popup{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            .empty-pop{
+                @include flex-layout(column, space-between, center);
+                background-color: var(--color-lightgraytxt);
+                color: var(--color-maintxt);
+                width: 60%;
+                height: 20rem;
+                padding: 24px 32px;
+                border-radius: 1rem;
+                text-align: center;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                min-width: 260px;
+                max-width: 400px;
+                svg {
+                    font-size: 5rem;
+                    color: var(--color-sub);
+                }
+                p {
+                    @include font-body-bold;
+                    text-align: center;
+                }
+                button {
+                    @include pop-btn();
+                }
+                .empty-bot{
+                    @include font-caption();
+                    color: var(--color-graytxt);
+                }
+            }
+        }
+    }
+    
+}
+
+//비밀번호 변경 페이지
+#reset-pw{
+    position: relative;
+    max-width: $small-size;
+    margin: 0 auto;
+    padding: 130px 16px;
+    padding-bottom: 100px;
+    width: 100%;
+    height: 100%;
+    @include font-body();
+    @include flex-layout();
+    // overflow: scroll;
+    @media screen and (min-width:1024px){
+        padding: 7rem 5rem;
+    }
+    .reset-pw-wrap{
+        width: 100%;
+        @include flex-layout(column,flex-start,flex-start);
+    gap: 4rem;
+        form{
+            width: 100%;
+            > div{
+                width: 100%
+            }
             label{
                 @include font-caption();
                 padding: 1rem;
@@ -599,144 +833,111 @@ button, input{
                     @include font-caption();
                 }
             }
-        }
-        button{
-            @include btn1();
-            margin-bottom: 0;
-            margin-top: 30rem;
-        }
-    }
-    .noid-popup{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 1000;
-        .id-pop{
-            @include flex-layout(column, space-between, center);
-            background-color: var(--color-lightgraytxt);
-            color: var(--color-maintxt);
-            width: 60%;
-            height: 20rem;
-            padding: 24px 32px;
-            border-radius: 1rem;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            min-width: 260px;
-            svg {
-                font-size: 5rem;
-                color: var(--color-sub);
+            .label-correct{
+                @include flex-layout($justify:space-between);
+                .reset-pass{
+                    @include font-caption();
+                    padding-right: 1rem;
+                    &.is-correct{
+                        color: var(--color-primary);
+                    }
+                    &.is-incorrect{
+                        color: red;
+                    }
+                }
             }
-            p {
-                @include font-body-bold;
-                text-align: center;
-            }
-            button {
-                @include pop-btn();
-            }
-            .noid-bot{
-                @include font-caption();
-                color: var(--color-graytxt);
+            button{
+                @include btn1();
+                margin-bottom: 0;
+                margin-top: 35rem;
             }
         }
-    }
-    .empty-popup{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 1000;
-        .empty-pop{
-            @include flex-layout(column, space-between, center);
-            background-color: var(--color-lightgraytxt);
-            color: var(--color-maintxt);
-            width: 60%;
-            height: 20rem;
-            padding: 24px 32px;
-            border-radius: 1rem;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            min-width: 260px;
-            svg {
-                font-size: 5rem;
-                color: var(--color-sub);
-            }
-            p {
-                @include font-body-bold;
-                text-align: center;
-            }
-            button {
-                @include pop-btn();
-            }
-            .empty-bot{
-                @include font-caption();
-                color: var(--color-graytxt);
-            }
-        }
-    }
-}
-
-//비밀번호 변경 페이지
-#reset-pw{
-    position: relative;
-    max-width: $small-size;
-    margin: 0 auto;
-    padding: 130px 16px;
-    padding-bottom: 70px;
-    width: 100%;
-    height: 100vh;
-    @include font-body();
-    @include flex-layout(column,flex-start,flex-start);
-    gap: 4rem;
-    overflow: scroll;
-    form{
-        width: 100%;
-        > div{
-            width: 100%
-        }
-        label{
-            @include font-caption();
-            padding: 1rem;
-        }
-        input{
-            padding: 1.6rem;
+        .too-short{
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            border: 1px solid var(--color-graytxt);
-            border-radius: 1.6rem;
-            outline-color: var(--color-primary);
-            &::placeholder{
-                @include font-caption();
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            .too-short-pass{
+                @include flex-layout(column, space-between, center);
+                background-color: var(--color-lightgraytxt);
+                color: var(--color-maintxt);
+                width: 60%;
+                height: 20rem;
+                padding: 24px 32px;
+                border-radius: 1rem;
+                text-align: center;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                min-width: 260px;
+                @include pop-max{
+                    width: 400px;
+                }
+                svg {
+                    font-size: 5rem;
+                    color: var(--color-sub);
+                }
+                p {
+                    @include font-body-bold;
+                    text-align: center;
+                }
+                button {
+                    @include pop-btn();
+                }
+                .too-short-bot{
+                    @include font-caption();
+                    color: var(--color-graytxt);
+                }
             }
         }
-        .label-correct{
-            @include flex-layout($justify:space-between);
-            .reset-pass{
-                @include font-caption();
-                padding-right: 1rem;
-                &.is-correct{
-                    color: var(--color-primary);
+        .less-info{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            .less-info-pass{
+                @include flex-layout(column, space-between, center);
+                background-color: var(--color-lightgraytxt);
+                color: var(--color-maintxt);
+                width: 60%;
+                height: 20rem;
+                padding: 24px 32px;
+                border-radius: 1rem;
+                text-align: center;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                min-width: 260px;
+                @include pop-max{
+                    width: 400px;
                 }
-                &.is-incorrect{
-                    color: red;
+                svg {
+                    font-size: 5rem;
+                    color: var(--color-sub);
+                }
+                p {
+                    @include font-body-bold;
+                    text-align: center;
+                }
+                button {
+                    @include pop-btn();
+                }
+                .less-info-bot{
+                    @include font-caption();
+                    color: var(--color-graytxt);
                 }
             }
-        }
-        button{
-            @include btn1();
-            margin-bottom: 0;
-            margin-top: 43rem;
         }
     }
+    
 }
 
 //비밀번호 변경 완료 페이지
@@ -746,9 +947,12 @@ button, input{
     margin: 0 auto;
     padding: 100px 16px;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     @include font-body();
     @include flex-layout(column,flex-end);
+    @media screen and (min-width:1024px){
+        padding: 7rem 5rem;
+    }
     .complete-change{
         text-align: center;
         margin-bottom: 35rem;

@@ -88,6 +88,11 @@
   &:hover {
     filter: brightness(85%);
   }
+  @include pop-max{
+    font-size: 20px;
+    height: 50px;
+    border-radius: 14px;
+  }
 }
 @mixin btn2 {
   width: 100%;
@@ -101,6 +106,11 @@
   font-family: inherit;
   &:hover {
     filter: brightness(90%);
+  }
+  @include pop-max{
+    font-size: 20px;
+    height: 50px;
+    border-radius: 14px;
   }
 }
 
