@@ -12,7 +12,7 @@ const CancelComplete = () => {
       </div>
       <div className="complete-btn">
         <button className="btn-1" onClick={()=>{navigate("/")}}>홈화면으로</button>
-        <button className="btn-2">다른 날짜 예약하기</button>
+        <button className="btn-2" onClick={()=>{navigate("/MobileReservation/schedule")}}>다른 날짜 예약하기</button>
       </div>
     </div>
   );

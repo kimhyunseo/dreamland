@@ -158,55 +158,50 @@
 
 
 //팝업 스타일  
-  .pop {
-    display: none;
+  .no-zone-selected{
     position: fixed;
-    top: 0; 
-    left: 0; 
-    width: 100%; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 1000;
-  }
-  .pop.active {
-    display: block;
-  }
-  .pop-up {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 342px;
-    min-height: 200px;
-    height: auto;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 2rem;
-    border-radius: 1rem;
-    text-align: center;
-    .pop-icon{
-      font-size: 48px;
-    }
-    p{
-      @include font-h3();
-    }
-    h4{
-      @include font-body();
-      color: var(--color-graytxt);
-      margin-top: 0.5rem;
-    }  
-    button{
-      width: 100%;
-      height: 40px;
-      border: none;
-      border-radius: 8px;
-      background-color: var(--color-primary);
-      color: var(--color-white);
-      font-size: 1.6rem;
-      font-weight: 600;
-      font-family: inherit;
-      margin-top: 2rem;
-      &:hover {
-        filter: brightness(85%);
+    .no-zone-box{
+      @include flex-layout(column, space-between, center);
+      background-color: var(--color-lightgraytxt);
+      color: var(--color-maintxt);
+      width: 60%;
+      height: 20rem;
+      padding: 24px 32px;
+      border-radius: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      min-width: 260px;
+      max-width: 400px;
+      svg {
+        font-size: 5rem;
+        color: var(--color-sub);
+      }
+      p {
+        @include font-body-bold;
+        text-align: center;
+      }
+      button {
+        @include pop-btn();
+      }
+      .no-zone-bot{
+          @include font-caption();
+          color: var(--color-graytxt);
       }
     }
   }

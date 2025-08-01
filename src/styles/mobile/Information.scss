@@ -110,8 +110,8 @@
 .info-map,
 .info-price,
 .info-how {
-  height: 100%;
-  min-height: calc(100vh - 70px);
+  height: fit-content;
+  max-height: calc(100vh - 70px);
   background-color: #f8f7fa;
   @include flex-layout(column, space-between, center);
   img {

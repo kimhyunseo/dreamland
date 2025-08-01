@@ -23,7 +23,7 @@ const MainHeaderMobile = () => {
           {
             loginCheck ? 
             <>
-            <p>{loginCheck.name}<span>님</span></p>
+            <p>{loginCheck.name} <span>님</span></p>
             <div className="user-icon">
             <FaUserLarge />
             </div>

@@ -127,7 +127,8 @@ useEffect(() => {
         <div className="alert-overlay">
           <div className="alert-box">
             <PiWarningCircleFill />
-            <p>로그인을 먼저 해주세요.</p>
+            <p>로그인 후 이용 가능합니다</p>
+            <p className="alert-bot">로그인 후 이용해 주세요</p>
             <button onClick={() => setShowAlert(false)}>확인</button>
           </div>
         </div>

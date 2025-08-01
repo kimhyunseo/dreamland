@@ -195,7 +195,7 @@ const ParkingSelect = ({  }) => {
         <button className="next-btn" onClick={nextbtn}> 다음으로 </button>
       </div>
 
-{/* 팝업 메시지 창 */}
+      {/* 팝업 메시지 창 */}
       {showMsg && (
         <div className="no-seat-selected">
             <div className="no-seat-box">

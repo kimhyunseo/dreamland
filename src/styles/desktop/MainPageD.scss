@@ -31,6 +31,7 @@
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     min-width: 260px;
+    max-width: 400px;
     svg {
       font-size: 5rem;
       color: var(--color-sub);
@@ -38,6 +39,10 @@
     p {
       @include font-body-bold;
       text-align: center;
+      &.alert-bot{
+        @include font-caption();
+        color: var(--color-graytxt);
+      }
     }
     button {
       width: 100%;
